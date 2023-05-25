@@ -146,6 +146,15 @@ li,
   border-left: 1px solid #ccc;
 }
 
+i{
+  color: black;
+  height: 50px;
+  width: 300px;
+}
+
+i:hover{
+  color: blue;
+}
 .controls .row select {
   color: #333;
   border: none;
@@ -245,6 +254,8 @@ li,
   justify-content: center;
   padding: 0 10px;
   min-height: 100vh;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 
 /*MEANING DICCIONARIO*/

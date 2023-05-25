@@ -114,12 +114,12 @@
     </script>
 
     <!--background stars -->
-    <div class="bg-animation">
+    <!-- <div class="bg-animation">
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
       <div id="stars4"></div>
-    </div>
+    </div> -->
     <!--background stars end-->
     <!-- Logo mas barra de navegacion! -->
     <h1 class="text-center font-weight-bold">Irregular Verbs</h1>
@@ -925,15 +925,21 @@
         <div class="container">
           <div class="wrapper">
             <div class="text-input">
-              <textarea spellcheck="false" class="from-text"
-                placeholder="Enter text">Hi, the idea of the page is help to write english as fast as possible, up there is a list of irregular Verbs, and here you can use it in a sentence</textarea>
+              <!-- <div class="texts">
+              </div> -->
+              <div class="speech">
+                <i class="bi bi-mic-fill" onclick="startDictation()"></i>
+              </div>
+              <textarea spellcheck="false" class="from-text" placeholder="Enter text" id="transcript"></textarea>
               <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
             </div>
             <ul class="controls">
               <li class="row from">
                 <select></select>
               </li>
-              <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+              <li class="exchange w-25">
+                <i class="bi bi-arrow-left-right d-flex justify-content-center"></i>
+              </li>
               <li class="row to">
                 <select></select>
               </li>
@@ -945,7 +951,7 @@
 
 
 
-      <div class="wrapper2 mt-4">
+      <section class="wrapper2">
         <h2 class="texto">English Dictionary</h2>
         <div class="search">
           <input type="text" placeholder="Search a word" required spellcheck="false">
@@ -981,7 +987,7 @@
             </li>
           </div>
         </ul>
-      </div>
+      </section>
 
     </div>
 
@@ -991,7 +997,7 @@
 
 
 
-
+    <script src="speak.js"></script>
     <script src="countries.js"></script>
     <script src="script.js"></script>
 
