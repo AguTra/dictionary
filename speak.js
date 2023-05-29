@@ -42,7 +42,7 @@ function startDictation() {
 //
         recognition.continuous = false;
         recognition.interimResults = false;
-        recognition.lang = document.querySelector("#select_dialect").value;
+        //recognition.lang = document.querySelector("#select_dialect").value;
         recognition.start();
     
         recognition.onresult = function (e) {
