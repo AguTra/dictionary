@@ -146,15 +146,16 @@ li,
   border-left: 1px solid #ccc;
 }
 
-i{
+i {
   color: black;
   height: 50px;
   width: 300px;
 }
 
-i:hover{
+i:hover {
   color: blue;
 }
+
 .controls .row select {
   color: #333;
   border: none;
@@ -308,8 +309,9 @@ i:hover{
 }
 
 .search i {
-  left: 18px;
+  left: 12px;
   pointer-events: none;
+  top: 36px;
   font-size: 16px;
 }
 
@@ -437,12 +439,24 @@ ul .content::-webkit-scrollbar {
   grid-template-columns: 1fr 1fr;
 }
 
+.pipogorosito {
+  color: black;
+  height: 50px;
+  width: 30px;
+  float: left;
+  padding: 10%;
+  margin: 10%;
+  background-color: blue;
 
+}
 
-
-
-
-
+.pipogorosito:hover {
+  background-color: red
+}
+.speech{
+  height: 50px;
+  width: 30px;
+}
 
 
 
@@ -454,13 +468,15 @@ ul .content::-webkit-scrollbar {
   div.Info {
     grid-row: 3;
   }
-  .gird-mode{
+
+  .gird-mode {
     display: grid;
-    grid-template-rows:1fr;
-    grid-template-columns:none ;
+    grid-template-rows: 1fr;
+    grid-template-columns: none;
 
   }
-  .wrapper2{
+
+  .wrapper2 {
     display: grid;
     grid-row: 2;
     width: 75vw;

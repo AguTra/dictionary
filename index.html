@@ -17,102 +17,6 @@
 <body class="content w-100">
 
   <header class="top-head img-fluid float-sm-start w-100">
-    <script class="modelo">
-      function myFunction() {
-        // Declare variables
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[0];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-      }
-    </script>
-
-    <script class="ip">
-      function myFunction2() {
-        // Declare variables
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput2");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[1];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-      }
-    </script>
-
-    <script class="sector">
-      function myFunction3() {
-        // Declare variables
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput3");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[2];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-      }
-    </script>
-
-    <script class="Nombre">
-      function myFunction4() {
-        // Declare variables
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput4");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[3];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-      }
-    </script>
-
     <!--background stars -->
     <div class="bg-animation">
       <div id="stars"></div>
@@ -928,7 +832,7 @@
               <!-- <div class="texts">
               </div> -->
               <div class="speech">
-                <i class="bi bi-mic-fill" onclick="startDictation()"></i>
+                <i class="pipogorosito" onclick="startDictation()" id="micro"></i>
               </div>
               <textarea spellcheck="false" class="from-text" placeholder="Enter text" id="transcript"></textarea>
               <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
@@ -945,13 +849,13 @@
               </li>
             </ul>
           </div>
-          <button>Translate Text</button>
+          <button id="probando-sobreescribir" class="sobreescribir-color">Translate Text</button>
         </div>
       </section>
 
 
 
-      <section class="wrapper2">
+      <section class="wrapper2 m-2">
         <h2 class="texto">English Dictionary</h2>
         <div class="search">
           <input type="text" placeholder="Search a word" required spellcheck="false">
