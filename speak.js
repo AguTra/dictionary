@@ -8,7 +8,7 @@ function startDictation() {
         recognition.start();
         trear = document.getElementById('probando-sobreescribir').innerText = 'Listening'
         const note = document.querySelector('.sobreescribir-color');
-        note.style.backgroundColor = 'red';
+        note.style.backgroundColor = 'green';
 
 
 
@@ -18,15 +18,40 @@ function startDictation() {
             back = document.getElementById('probando-sobreescribir').innerText = 'Translate text'
             const note = document.querySelector('.sobreescribir-color');
             note.style.backgroundColor = 'blue';
-            document.getElementById('labnol').submit();
+            //alert("se escucho")
         };
 
         recognition.onerror = function (e) {
-            edit = document.getElementById('probando-sobreescribir').innerText = 'Translate text'
+            edit = document.getElementById('probando-sobreescribir').innerText = 'ERROR, try again'
             const note = document.querySelector('.sobreescribir-color');
-            note.style.backgroundColor = 'blue';
+            note.style.backgroundColor = 'red';
+            //alert("Error")
             recognition.stop();
         };
+
+        recognition.nomatch = function (e) {
+            edit = document.getElementById("probando-sobreescribir").innerText = "ERROR, try again"
+            const note = document.querySelector('.sobreescribir-color');
+            note.style.backgroundColor = 'red';
+            //alert("no-Match")
+            recognition.stop();
+        }
+
+        // recognition.onend = function (e) {
+        //     edit = document.getElementById("probando-sobreescribir").innerText = "ERROR, try again"
+        //     const note = document.querySelector('.sobreescribir-color');
+        //     note.style.backgroundColor = 'red';
+        //     alert("onend")
+        // }
+
+        // recognition.onspeechend = () => {
+        //     recognition.stop();
+        //     edit = document.getElementById("probando-sobreescribir").innerText = "ERROR, try again"
+        //     const note = document.querySelector('.sobreescribir-color');
+        //     note.style.backgroundColor = 'red';
+        //     //alert("No se reconocio voz, por favor trate de nuevo");
+        // };
+
     }
 }
 
