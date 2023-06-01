@@ -52,6 +52,8 @@ function startDictation() {
         //     //alert("No se reconocio voz, por favor trate de nuevo");
         // };
 
+    } else{
+        alert("your explorer can't use the microphone, please write")
     }
 }
 
